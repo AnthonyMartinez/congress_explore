@@ -4,8 +4,9 @@ from google.cloud import bigquery
 import os
 import json 
 
-# api_key = os.environ['CONGRESS_API_KEY']
-api_key = 'dTE9VbIr4rqhy502hUejkZ25yh3i3hMIwbyoMCsD' 
+# to avoid password in source code - export api key text to env var "CONGRESS_API_KEY"
+api_key = os.environ['CONGRESS_API_KEY']
+
 url = 'https://api.congress.gov/v3/bill'
 def get_items(url, limit, key, obj_key):
 
